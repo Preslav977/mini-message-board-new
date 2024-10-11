@@ -3,15 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <form method="POST" action="/new">
-      <label for="username">Username:</label>
-      <input type="text" name="username" id="username" />
-      <label for="message">Message:</label>
-      <input type="text" name="message" id="message" />
-      <button type="submit">Submit</button>
-    </form>
+    <div class="form-container">
+      <form method="POST" action="/new">
+        <div class="form-content">
+          <div>
+            <label for="username">Username:</label>
+          </div>
+
+          <input type="text" name="username" id="username" />
+        </div>
+        <div class="form-content">
+          <div>
+            <label for="message">Message:</label>
+          </div>
+          <input type="text" name="message" id="message" />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   </body>
 </html>

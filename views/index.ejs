@@ -4,21 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Mini Messaging Board</title>
   </head>
   <body>
-    <%= title %>
+    <%= title %> <%- include('navbar') %>
 
-    <section>
-      <ul>
+    <main>
+      <div class="container">
         <% messages.forEach(message => { %>
-        <li><%= message.username %></li>
-        <li><%= message.message %></li>
-        <li><%= message.date_added %></li>
+        <div class="content">
+          <h2><%= message.username %></h2>
+          <div>
+            <p><%= message.message %></p>
+          </div>
+          <div>
+            <p><%= message.date_added %></p>
+          </div>
 
-        <a href="/message/<%= message.id %>">Details</a>
+          <a href="/message/<%= message.id %>">Details</a>
+        </div>
         <% }) %>
-      </ul>
-    </section>
+      </div>
+    </main>
   </body>
 </html>

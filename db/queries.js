@@ -1,4 +1,3 @@
-const { user, rows } = require("pg/lib/defaults");
 const pool = require("./pool");
 
 async function getAllUsernamesAndMessages() {
