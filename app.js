@@ -4,7 +4,7 @@ const express = require("express");
 
 const path = require("node:path");
 
-const indexRouter = require("./routes/index");
+const messageRouter = require("./routes/messageRouter");
 
 const app = express();
 
@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 const assetsPath = path.join(__dirname, "public");
 app.use(express.static(assetsPath));
 
-app.use("/", indexRouter);
+app.use("/", messageRouter);
 
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Express app - listening on port ${PORT}!`));

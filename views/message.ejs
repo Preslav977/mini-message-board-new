@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <%= message %>
+  </head>
+  <body>
+    <section>
+      <ul>
+        <% message.forEach(msg => { %>
+        <li><%= msg.username %></li>
+        <li><%= msg.message %></li>
+        <li><%= msg.date_added %></li>
 
-
-</body>
+        <a href="/">Back</a>
+        <% }) %>
+      </ul>
+    </section>
+  </body>
 </html>

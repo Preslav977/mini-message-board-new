@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
-<body>
-   <%= title %>
+  </head>
+  <body>
+    <%= title %>
 
-   <section>
-   <ul>
-    <% messages.forEach(message => { %>
-        <li>
-            <%= message.text %>
-        </li>
-        <li><%= message.user %></li>
-        <li><%= message.added %></li>
+    <section>
+      <ul>
+        <% messages.forEach(message => { %>
+        <li><%= message.username %></li>
+        <li><%= message.message %></li>
+        <li><%= message.date_added %></li>
 
         <a href="/message/<%= message.id %>">Details</a>
         <% }) %>
-    
-   </ul>
-   </section>
-</body>
+      </ul>
+    </section>
+  </body>
 </html>
