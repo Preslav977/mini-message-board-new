@@ -18,7 +18,7 @@ app.use(express.static(assetsPath));
 
 app.use("/", messageRouter);
 
-const PORT = 5432;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Express app - listening on port ${PORT}!`));
 
 module.exports = app;

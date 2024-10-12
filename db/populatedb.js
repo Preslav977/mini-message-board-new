@@ -18,6 +18,8 @@ async function main() {
     connectionString: `${argv[2]}`,
   });
 
+  console.log(`${argv[2]}`);
+
   await client.connect();
   await client.query(SQL);
   await client.end();
