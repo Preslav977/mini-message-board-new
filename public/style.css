@@ -30,10 +30,12 @@ body {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .content {
@@ -49,12 +51,13 @@ body {
 }
 
 form {
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  width: 100%;
 }
 
 .form-container {
@@ -62,6 +65,10 @@ form {
   align-items: center;
   justify-content: center;
   height: 500px;
-  max-width: 1000px;
   margin: 0 auto;
+  max-width: 1000px;
+}
+
+input {
+  width: 300px;
 }

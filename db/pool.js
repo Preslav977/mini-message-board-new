@@ -1,6 +1,5 @@
 const { Pool } = require("pg");
 
 module.exports = new Pool({
-  connectionString:
-    "postgresql://process.env.ROLE_NAME:process.env.ROLE_PASSWORD@localhost:5432/mini_message_board",
+  connectionString: `postgresql://${process.env.DB_USER}:${process.env.DB_PASSWORD}@localhost:${process.env.PORT}/${process.env.DB_NAME}`,
 });

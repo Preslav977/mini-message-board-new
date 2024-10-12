@@ -4,7 +4,6 @@ async function getUsernameAndMessage(req, res) {
   const messages = await db.getAllUsernamesAndMessages();
 
   res.render("index", {
-    title: "Mini Messaging Board",
     messages: messages,
   });
 }
