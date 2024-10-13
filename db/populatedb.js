@@ -1,8 +1,8 @@
+require("dotenv").config();
+
 const { Client } = require("pg");
 
 const { argv } = require("node:process");
-
-require("dotenv").config();
 
 const SQL = `CREATE TABLE IF NOT EXISTS mini_msg_board (
 id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
@@ -17,7 +17,7 @@ async function main() {
   console.log("seeding...");
 
   const client = new Client({
-    connectionString: `postgresql://${process.env.DB_USER}:${process.env.DB_PASSWORD}@localhost:5432/${process.env.DB_NAME}`,
+    connectionString: process.env.DBConnLink,
   });
 
   await client.connect();
